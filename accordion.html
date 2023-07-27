@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="accordion.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+</head>
+<body>
+    <button style = " height:30px; width:200px; " onclick = "openPopUp()"> click to open popup </button>
+    <p>This is a paragraph</p>
+    <br>
+    <p id="test">This is another paragraph</p>
+    <!-- <button>Click Me</button> -->
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
+    Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+    <script>
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("#div1").load("demo_test.txt");
+            })
+
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow")
+            })
+
+            $("input").blur(function(){
+                $(this).css("background-color", "blue")
+            })
+
+            $("p").on("click", function(){
+    $(this).hide();
+  });
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }
+   
+  });
+        })
+          function openPopUp() {
+         let url = "https://www.tutorialspoint.com/index.htm";
+         let height = 300;
+         let width = 700;
+         var left = ( screen.width - width ) / 2;
+         var top = ( screen.height - height ) / 2;
+         var newWindow = window.open( url, "center window", 'resizable = yes, width=' + width + ', height=' + height + ', top='+ top + ', left=' + left);
+      }
+    </script>
+
+    <script src="accordion.js">  </script>
+</body>
+</html>

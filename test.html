@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+ .form-popup {
+  display: none;
+  position: fixed;   
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  display: none; /* Hidden by default */
+    /* position: fixed; Stay in place */
+    /* z-index: 1; Sit on top */
+    padding-top: 100px; /* Location of the box */
+     left: 0; 
+     top: 0;   
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */   
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 500px;
+  padding: 10px;
+  background-color: white;
+
+  margin-left: auto;
+    margin-right: auto;
+
+  -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+/* Full-width input fields */
+/* .form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+} */
+
+/* When the inputs get focus, do something */
+/* .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+} */
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+ 
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+} 
+
+.align{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding:20px;
+  /* margin-left: 0; */
+  gap: 20px;
+}
+
+.Cardno{
+  display: flex;
+  flex-direction: row; 
+}
+
+.det{
+  display: flex;
+  flex-direction: column; 
+}
+.align input{
+  width: 100%;
+}
+
+input{
+height: 30px;
+}
+
+.pic{
+  display:none;
+
+}
+
+.active{
+display: block;
+}
+</style>
+</head>
+<body onload="getCookie()">
+
+<h2>Popup Form</h2>
+<p>Click on the button at the bottom of this page to open the login form.</p>
+<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+<!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <p>Good journalism takes time, everyday we work hard to get news at your door step</p>
+
+    <label for="">Card Number</label>
+    <div class="Cardno">
+    <input type="text" id="debitType" placeholder="0000 0000 0000 0000" required >
+    <img src=""  height="50" width="50" class="pic">
+    </div>
+
+    <div class="align">
+    <div class="det">
+      <label for="">Cvv</label>
+      <input type="number" required>
+    </div>
+
+    <div class="det">
+      <label for="">Date</label>
+      <input type="text" id="see" placeholder="MM/YY" required>
+    </div>
+
+    <div class="det">
+      <label for="">Password</label>
+      <input type="password" required>
+    </div>
+
+    <div class="det">
+      <label for="">Amount</label>
+      <input type="number" required>
+    </div>
+  </div>
+
+    <button type="submit" class="btn" onclick="submitPersonalInfo(); setCookie()">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+
+  
+</div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js" integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</script> -->
+<script>
+
+  function setCookie(){
+    localStorage.setItem('name', 'keep')
+  }
+
+  function getCookie(){
+    let value = localStorage.getItem('name')
+
+    if(value != 'keep'){
+      setTimeout(show, 2000)
+      function show(){
+        document.getElementById('myForm').style.display = "block";
+      }
+    }
+    else{
+      alert('You are Welcome')
+    }
+  }
+//   window.addEventListener("load", setTimeout)
+// setTimeout(show, 2000)
+// function show(){
+//   document.getElementById('myForm').style.display = "block";
+// }
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+  var stuff = document.getElementById('debitType').value
+let img = document.querySelector(".pic")
+
+    var cleave = new Cleave('#see', {
+    date: true,
+    datePattern: ['m', 'y']
+});
+
+var credit = new Cleave('#debitType', {
+    creditCard: true,
+    onCreditCardTypeChanged: function (type) {
+      console.log(type);
+        // update UI ...
+       if (type == "mastercard") {
+        img.classList.remove('pic')
+        img.setAttribute("src", "./images/mc.png")
+        return 
+       }
+
+       if(type == "visa") {
+        img.classList.remove('pic')
+        img.setAttribute("src", "./images/vc.png")
+        return
+       }
+
+       if(type == "maestro") {
+        img.classList.remove('pic')
+        img.setAttribute("src", "./images/Verve_Image.png")
+        return
+       }
+
+       img.setAttribute("src", "")
+       img.classList.add('pic')
+    }
+});
+
+
+</script>
+
+</body>
+</html>

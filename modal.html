@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <title>Modal</title>
+</head>
+<body>
+    <h2>Animated Modal with Header and Footer</h2>
+<!-- Trigger/Open The Modal -->
+<!-- <button id="myBtn">Open Modal</button> -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span id="close" onclick="Close()">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+  <button class="open-button" onclick="openForm()">Open Form</button>
+
+  <form action="" >
+    <div class="name">
+      <label for=""> Name</label>
+      <input type="text" name="" id="">
+    </div>
+   
+    <div class="email">
+      <label for="">E-mail</label>
+    <input type="email" name="" id="">
+    </div>
+    
+    <div class="message">
+      <label for="">Message</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+   
+    <div class="btn">
+      <input type="submit" value="Send">
+    </div>     
+  </form>
+</div>
+<!-- <script id="name" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> -->
+<script >
+  
+
+  // function display(){
+  //   document.getElementById('myModal').style.display = "block"; 
+  // }
+
+  window.addEventListener("load", setTimeout)
+setTimeout(show, 2000)
+function show(){
+  document.getElementById('myModal').style.display = "block";
+}
+
+  function Close(){
+    document.getElementById('myModal').style.display = "none";
+  }
+
+  setTimeout(display, 3000);
+</script>
+</body>
+</html>

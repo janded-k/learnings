@@ -1,0 +1,30 @@
+#main-heading {
+    color:#fff;
+    padding-bottom: 10px;   
+    text-align: center;
+}
+
+.list-items{
+   color:black;
+   background-color: #fff;
+   text-align: center;
+}
+
+.container{
+    padding: 10px;
+    border: #fff solid 3px;    
+    border-radius: 10px;
+}
+
+body{
+    align-content: center;
+    background-color: black;   
+    background-color: #333;
+}
+
+.container li{
+    padding: 5px;
+    border: black 1px solid;
+    list-style: none;   
+}
+

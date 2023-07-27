@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/style.css">
+    <title>Document</title>
+</head>
+<body>
+  
+  <p>Display a list of links as a horizontal menu:</p>
+
+  <ul>
+    <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+    <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+    <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+  </ul>
+     
+  <h2>position: static;</h2>
+
+<p>An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+
+<div class="static">
+This div element has position: static;
+</div>
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+<p id="p1">Red</p>
+<p id="p2">Green</p>
+<p id="p3">Blue</p>
+<p id="p4">Grey</p>
+<p id="p5">Yellow</p>
+<p id="p6">Cerise</p>
+
+<p id="p1">Green</p>
+<p id="p2">Light green</p>
+<p id="p3">Dark green</p>
+<p id="p4">Pastel green</p>
+<p id="p5">Violet</p>
+<p id="p6">Pastel violet</p>
+
+<h1>Without box-sizing</h1>
+
+<div class="div1">This div is smaller (width is 300px and height is 100px).</div>
+<br>
+<div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
+
+
+<script>
+  const myNodelist = document.querySelectorAll("p");
+  document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[1].innerHTML;
+</script>
+</body>
+</html>

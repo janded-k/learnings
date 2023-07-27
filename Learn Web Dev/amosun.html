@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<i class="fa fa-home"></i>
+<i class="fa fa-search fa-3x" id="search" ></i>                 
+<i class="fa fa-cloud"></i>
+<i class="fa fa-trash"></i>
+
+<div id="modal-container">
+  <div class="search-menu">
+    <input type="text" placeholder="search name" class="s-bar"/>
+    <p  class="btn-close">&times;</p>
+  </div>
+</div>
+<nav id="navbar">
+  <div class="container">
+      <u1>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Campaign</a></li>
+          <li><a href="#">About</a></li> 
+          <li><a href="#">Services</a></li>
+      </u1>
+  </div>           
+</nav>
+
+<div class="tab">
+    <button class="tablink" onclick="openPage('Home', this, 'red')"><i class="fa fa-home"></i><p>Home</p></button>
+    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+    <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Home is where the heart is..</p>
+       
+      </div>
+      
+      <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>Some news this fine day!</p>
+      </div>
+      
+      <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+        <a href="#" class="next">Next &raquo;</a>
+
+<a href="#" class="previous round">&#8249;</a>
+<a href="#" class="next round">&#8250;</a>
+      </div>
+      
+      <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+      </div>
+
+      <a href="Tinubu.html" class="previous">&laquo; Previous</a>
+
+      <ol>
+        <li></li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+    </ol>
+    <div class="image_link">
+        <a href="" target="blank"><img src="./assets/images/apc_flag.jpg" width="100" height="100">
+           <p>go to programiz and see how things are done jekalfhjalhflk   <br> hufhajflkaf  hawihfjklasdlkasj dfasjlgeeds </p>
+        </a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> 

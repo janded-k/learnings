@@ -1,0 +1,31 @@
+
+ .div-1, .div-2, .div-3 {
+     background-color: green;
+     height: 100px;
+    width: 100px;}
+
+   .div-2 {background-color: orange;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+/* short hand for padding */
+padding: 20px 20px 15px 8px;
+
+    margin: 20px;
+    border-left-style: dashed;
+    border-width: 5px;
+    border-color: black;
+
+    margin-top: 15px;
+    margin-bottom: 18px;
+    margin-left: 18px;
+    margin-right: 20px;
+
+    box-sizing: border-box;
+    }
+
+    .div-3{
+        background-color: red;
+    }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="creditCard.css">
+</head>
+<body onload="getCookie()">
+    <div class="form-popup" id="myForm">
+        <form method="post" class="form-container" asp-action="Test" id="take" >
+          <p><b>Good journalism is on the verge of extinction, Everyday we work hard to get news at your door step. You can do
+              well to keep the good work going by donating any amount of your choice.
+          </b></p>
+      
+          
+          <div class="Identity">  
+            <label asp-for="Name">Name On Card</label>
+          <input asp-for="Name" type="text" id="kok"/>
+          </div>
+      
+          <label asp-for="CardNo">Card Number</label>
+          <div class="Cardno">
+          <input asp-for="CardNo" type="text"  placeholder="0000 0000 0000 0000" required id="kok1">
+          <img src=""  height="30" width="50" class="pic">
+          </div>
+      
+          <div class="align">
+          <div class="det">
+            <label asp-for="Cvv">Cvv</label>
+            <input asp-for="Cvv" type="number" id="kok2" required>
+          </div>
+      
+          <div class="det">
+            <label asp-for="Oge">Date</label>
+            <input asp-for="Oge" type="text"  id="kok3" placeholder="MM/YY" required>
+          </div>
+      
+          <div class="det">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" type="password" id="kok4" required>
+          </div>
+      
+          <div class="det">
+            <label asp-for="Charity">Amount</label>
+            <input asp-for="Charity" type="number" class="kok5" id="kok5" required>
+          </div>
+        </div>
+                  <div class="btn">
+                     <button type="submit" onclick="setCookie()" class="btn">Login</button>
+                      <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+                  </div>
+        </form>
+      </div>   
+
+      <!-- <input type="text" class="kok">
+      <input type="button" value="setCookie" onclick="setCookie()"> -->
+</body>
+<script id="name" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="creditCard.js"></script>
+</html>
